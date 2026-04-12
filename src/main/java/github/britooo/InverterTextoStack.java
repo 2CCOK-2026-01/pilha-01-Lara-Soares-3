@@ -8,6 +8,16 @@ public class InverterTextoStack {
 
             Então, não fique pilhado, use a classe Pilha.
         */
-        return null;
+
+        Pilha<Character> pilha = new Pilha<>(input.length());
+        for (char c : input.toCharArray()) {
+            pilha.push(c);
+        }
+        StringBuilder resultado = new StringBuilder();
+        while (!pilha.isEmpty()) {
+            resultado.append(pilha.pop());
+        }
+        return resultado.toString();
+
     }
 }
